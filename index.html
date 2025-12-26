@@ -83,7 +83,7 @@
                 { month: 7, name: "Tháng Bảy", status: "Chưa có", link: null, date: "--/07/2025" },
                 { month: 8, name: "Tháng Tám", status: "Chưa có", link: null, date: "--/08/2025" },
                 { month: 9, name: "Tháng Chín", status: "Chưa có", link: null, date: "--/09/2025" },
-                { month: 10, name: "Tháng Mười", status: "Chưa có", link: https://diembui-glitch.github.io/BAO-CAO-DAO-TAO-THANG-10/, date: "--/10/2025" },
+                { month: 10, name: "Tháng Mười", status: "Sẵn sàng", link: "https://diembui-glitch.github.io/BAO-CAO-DAO-TAO-THANG-10/", date: "26/12/2025" },
                 { month: 11, name: "Tháng Mười Một", status: "Chưa có", link: null, date: "--/11/2025" },
                 { month: 12, name: "Tháng Mười Hai", status: "Chưa có", link: null, date: "--/12/2025" }
             ],
@@ -104,7 +104,7 @@
         };
 
         function switchYear(year) {
-            // Update UI buttons
+            // Cập nhật trạng thái nút bấm năm
             document.querySelectorAll('.year-tab').forEach(btn => {
                 btn.classList.remove('active');
                 btn.classList.add('text-slate-500');
@@ -118,7 +118,7 @@
 
         function renderReports(year) {
             const grid = document.getElementById('report-grid');
-            grid.innerHTML = ''; // Clear current grid
+            grid.innerHTML = ''; // Xóa lưới hiện tại
 
             reportData[year].forEach(report => {
                 const isAvailable = report.link !== null;
@@ -153,7 +153,7 @@
             });
         }
 
-        // Initialize with Year 2025
+        // Khởi tạo mặc định với Năm 2025
         window.onload = () => {
             renderReports('2025');
         };
